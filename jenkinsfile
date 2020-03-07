@@ -1,0 +1,44 @@
+import hudson.model.Result
+
+pipeline {
+    agent any
+
+    environment {
+        PWD=pwd()
+        FAILED_STAGE=""
+    }
+
+    stages {
+        // stage('Clone') {
+        //     steps {
+        //         git branch: 'master', credentialsId: 'ayyappa-git-credentials', url: 'https://github.com/ayyappamaddi/angular-ptrotractor'
+
+        //         echo 'Recording git commit used to build artifacts'
+        //         sh 'git rev-parse HEAD > apex_project_build_job_git_sha'
+        //         // archiveArtifacts artifacts: 'apex_project_build_job_git_sha', excludes: null
+        //     }
+        // }
+
+        // FRONT END
+
+        stage('FE Dependencies') {
+            steps {
+               
+                sh "./scripts/frontend-dependencies.sh"
+            }
+        }
+
+        stage('FE Test') {
+            steps {
+                script {
+                    FAILED_STAGE=env.STAGE_NAME
+                }
+                sh './scripts/test-frontend.sh'
+                junit "frontend/reports/junit.xml"
+            }
+        }
+
+
+    }
+    
+}
