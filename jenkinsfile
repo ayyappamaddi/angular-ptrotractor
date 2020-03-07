@@ -3,7 +3,7 @@ import hudson.model.Result
 pipeline {
     agent any
 
-    tools {nodejs "Node 8.9.3"}
+    tools {nodejs "Node 8.9.3", Xvfb "xvfb"}
 
     environment {
         PWD=pwd()
