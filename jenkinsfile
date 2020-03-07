@@ -3,7 +3,7 @@ import hudson.model.Result
 pipeline {
     agent any
 
-    tools {nodejs "node"}
+    tools {nodejs "Node 8.9.3"}
 
     environment {
         PWD=pwd()
@@ -30,15 +30,15 @@ pipeline {
             }
         }
 
-        stage('FE Test') {
-            steps {
-                // script {
-                //     FAILED_STAGE=env.STAGE_NAME
-                // }
-                // sh './scripts/test-frontend.sh'
-                // junit "frontend/reports/junit.xml"
-            }
-        }
+        // stage('FE Test') {
+        //     steps {
+        //         script {
+        //             FAILED_STAGE=env.STAGE_NAME
+        //         }
+        //         sh './scripts/test-frontend.sh'
+        //         junit "frontend/reports/junit.xml"
+        //     }
+        // }
 
 
     }
