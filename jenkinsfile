@@ -5,7 +5,6 @@ pipeline {
 
     tools {
         nodejs "Node 8.9.3" 
-        xvfb "xvfb"
         }
 
     environment {
