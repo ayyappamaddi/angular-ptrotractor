@@ -5,7 +5,6 @@ pipeline {
 
     tools {
         nodejs "Node 8.9.3" 
-        Xvfb "default"
         }
 
     environment {
@@ -28,8 +27,13 @@ pipeline {
 
         stage('FE Dependencies') {
             steps {
+                node {
+  wrap([$class: 'Xvfb']) {
+    sh "./scripts/frontend-dependencies.sh"
+  }
+}
                
-                sh "./scripts/frontend-dependencies.sh"
+                
             }
         }
 
