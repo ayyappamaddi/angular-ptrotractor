@@ -19,7 +19,7 @@ exports.config = {
     // }
   },
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  directConnect: false,
+  directConnect: true,
   // baseUrl: 'https://acquire.qa.altusplatform.com/',
   framework: 'jasmine',
   jasmineNodeOpts: {
