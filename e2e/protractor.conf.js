@@ -18,7 +18,7 @@ exports.config = {
     //   'args': ['--safe-mode']
     // }
   },
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  seleniumAddress: 'http://192.168.99.100:4444/wd/hub',
   directConnect: false,
   // baseUrl: 'https://acquire.qa.altusplatform.com/',
   framework: 'jasmine',
