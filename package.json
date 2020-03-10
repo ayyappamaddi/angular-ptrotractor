@@ -7,7 +7,6 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    // "pree2e": "",
     "e2e": "protractor ./e2e/protractor.conf.js"
   },
   "private": true,
