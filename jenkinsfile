@@ -28,9 +28,8 @@ pipeline {
         stage('FE Dependencies') {
             steps {
                 
-  wrap([$class: 'Xvfb']) {
     sh "./scripts/frontend-dependencies.sh"
-  }
+  
 
                
                 
