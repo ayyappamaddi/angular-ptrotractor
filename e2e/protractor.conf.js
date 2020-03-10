@@ -9,16 +9,16 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-      args: ['--disable-browser-side-navigation']
-    }
-    // 'browserName': 'firefox',
-    // 'moz:firefoxOptions': {
-    //   'args': ['--safe-mode']
+    // 'browserName': 'chrome',
+    // 'chromeOptions': {
+    //   args: ['--disable-browser-side-navigation']
     // }
+    'browserName': 'firefox',
+    'moz:firefoxOptions': {
+      'args': ['--safe-mode']
+    }
   },
-  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
+  seleniumAddress: 'http://192.168.99.100:4444/wd/hub',
   // seleniumAddress: 'http://localhost:4444/wd/hub',
   directConnect: false,
   // baseUrl: 'https://acquire.qa.altusplatform.com/',
