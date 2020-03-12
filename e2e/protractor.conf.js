@@ -11,7 +11,7 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      args: ['--disable-browser-side-navigation','--headless']
+      args: ['headless']
     }
     // 'browserName': 'firefox',
     // 'moz:firefoxOptions': {
