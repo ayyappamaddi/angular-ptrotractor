@@ -6,5 +6,5 @@ echo 'install protractor globally'
 # webdriver-manager shutdown
 # webdriver-manager update --standalone  --gecko false
 # webdriver-manager start
-npm run e2e
+xvfb-run npm run e2e
 echo 'e2e test cases executed.'
