@@ -11,7 +11,7 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      args: ['--disable-browser-side-navigation','--headless','--disable-dev-shm-usage']
+      args: ['--disable-browser-side-navigation', '--headless', '--disable-dev-shm-usage'.'--no-sandbox']
     }
     // 'browserName': 'firefox',
     // 'moz:firefoxOptions': {
