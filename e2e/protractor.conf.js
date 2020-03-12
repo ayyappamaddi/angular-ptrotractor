@@ -11,16 +11,16 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      args: ['--disable-browser-side-navigation']
+      args: ['--disable-browser-side-navigation','--headless']
     }
     // 'browserName': 'firefox',
     // 'moz:firefoxOptions': {
     //   'args': ['--safe-mode']
     // }
   },
-  // seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
+  seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
   // seleniumAddress: 'http://localhost:4444/wd/hub',
-  directConnect: true,
+  directConnect: false,
   // baseUrl: 'https://acquire.qa.altusplatform.com/',
   framework: 'jasmine',
   jasmineNodeOpts: {
